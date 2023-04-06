@@ -1,5 +1,6 @@
 :host {
     background: white;
+    min-height: 100vh;
     min-width: 270px;
     max-width: 270px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;

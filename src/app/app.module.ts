@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,7 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { AgendaEditComponent } from './agenda/agenda-edit/agenda-edit.component';
 import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
 import { AgendaItemComponent } from './agenda/agenda-item/agenda-item.component';
+import { PatientDetailComponent } from './patients/patient-detail/patient-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { AgendaItemComponent } from './agenda/agenda-item/agenda-item.component'
     AgendaComponent,
     AgendaEditComponent,
     AgendaListComponent,
-    AgendaItemComponent
+    AgendaItemComponent,
+    PatientDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,6 @@
-<p>patient-item works!</p>
+<th scope="row">{{ indexPatient }}</th>
+<td>{{ patient.firstName }}</td>
+<td>{{ patient.lastName }}</td>
+<td>{{ calculateAge(patient.dateOfBirth) }}</td>
+<td>{{ patient.gender == 'M' ? 'Male' : 'Female' }}</td>
+<td>{{ patient.phoneNumber }}</td>

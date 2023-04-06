@@ -1,1 +1,27 @@
-<p>patients works!</p>
+<div class="container-fluid p-10">
+    <div class="row">
+        <div class="col-4">
+            <h1>Patients</h1>
+        </div>
+        <div class="col-8">
+            <button 
+                type="button" 
+                class="btn btn-primary"
+                [routerLink]="['new']">
+                Add New
+            </button>
+        </div>
+        
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <app-patient-list></app-patient-list>
+        </div>
+        <div class="col-md-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    
+</div>
+
