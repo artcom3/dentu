@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
+import { PatientsFilterPipe } from './patients/patients-filter.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { AgendaEditComponent } from './agenda/agenda-edit/agenda-edit.component'
 import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
 import { AgendaItemComponent } from './agenda/agenda-item/agenda-item.component';
 import { PatientDetailComponent } from './patients/patient-detail/patient-detail.component';
+import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
+import { AgendaFilterPipe } from './agenda/agenda-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { PatientDetailComponent } from './patients/patient-detail/patient-detail
     AgendaEditComponent,
     AgendaListComponent,
     AgendaItemComponent,
-    PatientDetailComponent
+    PatientDetailComponent,
+    AgendaDetailComponent,
+    PatientsFilterPipe,
+    AgendaFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { PatientsService } from '../patients.service';
 })
 export class PatientListComponent implements OnInit, OnDestroy {
 
-  term?: string;
+  term: string = '';
   patientListChangedSub: Subscription = Subscription.EMPTY;
   patients: Patient[] = [];
 
@@ -25,6 +25,10 @@ export class PatientListComponent implements OnInit, OnDestroy {
           this.patients = patients;
         }
       )
+  }
+
+  search(value: string) {
+    this.term = value;
   }
 
   ngOnDestroy(): void { 

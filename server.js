@@ -12,6 +12,7 @@ var index = require('./server/routes/app');
 
 // ... ADD CODE TO IMPORT YOUR ROUTING FILES HERE ... 
 const patientsRoutes = require('./server/routes/patients');
+const agendaRoutes = require('./server/routes/agenda');
 
 
 // establish a connection to the mongo database
@@ -60,6 +61,7 @@ app.use('/', index);
 
 // ... ADD YOUR CODE TO MAP YOUR URL'S TO ROUTING FILES HERE ...
 app.use('/api/patients', patientsRoutes);
+app.use('/api/agenda', agendaRoutes);
 
 // Tell express to map all other non-defined routes back to the index page
 app.get('*', (req, res) => {

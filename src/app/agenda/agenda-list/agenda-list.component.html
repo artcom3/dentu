@@ -1,1 +1,29 @@
-<p>agenda-list works!</p>
+<div class="table-responsive bg-white p-3 rounded-3 shadow-sm">
+    <div class="col-4 pb-2">
+        <span>Enter a search value</span>
+        <input type="date" (input)="search(searchBox.value)" class="form-control" #searchBox> 
+        <div class="glyphicon glyphicon-search input-group-addon" (click)="search(searchBox.value)"></div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Patient</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Date</th>
+                <th scope="col">Hour</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr 
+                *ngFor="let agenda of agendas | agendaFilter:term; index as i"
+                role='button'
+                app-agenda-item
+                [indexAgenda]="i+1"
+                [agenda] = "agenda"
+                [routerLink]="[agenda.id]"
+                routerLinkActive="table-active">
+            </tr>
+        </tbody>
+    </table>
+</div>

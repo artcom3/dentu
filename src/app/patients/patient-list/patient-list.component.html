@@ -1,4 +1,8 @@
 <div class="table-responsive bg-white p-3 rounded-3 shadow-sm">
+    <div class="col-6 pb-3">
+        <input type="text" (keyup)="search(searchBox.value)" class="form-control" placeholder="Enter a search value" #searchBox>
+        <div class="glyphicon glyphicon-search input-group-addon" (click)="search(searchBox.value)"></div>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -12,7 +16,7 @@
         </thead>
         <tbody >
             <tr 
-                *ngFor="let patient of patients; index as i"
+                *ngFor="let patient of patients | patientsFilter:term; index as i"
                 role='button'
                 app-patient-item
                 [indexPatient]="i+1"
